@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->StatusValueLabel->setText("Idle");
+    ui->ReadyStatusValueLabel->setText("Idle");
     ui->BatteryValueLabel->setText("0%");
     ui->YawAngleValueLabel->setText("0");
 
@@ -35,14 +35,14 @@ void MainWindow::on_StartLabel_clicked()
     if(robotRunning)
     {
         ui->StartLabel->setText("STOP");
-        ui->StatusValueLabel->setText("Running");
+        ui->ReadyStatusValueLabel->setText("Running");
 
         qDebug() << "Robot Started";
     }
     else
     {
         ui->StartLabel->setText("START");
-        ui->StatusValueLabel->setText("Stopped");
+        ui->ReadyStatusValueLabel->setText("Stopped");
 
         qDebug() << "Robot Stopped";
     }
